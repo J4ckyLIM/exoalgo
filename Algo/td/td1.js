@@ -47,7 +47,13 @@ function division_reste(a, b) {
 function is_prime(a) {
 	var is = 1;
 	// Ne rien modifier au dessus de ce commentaire
-    
+    for (var i = 2; i < a; i++){
+    	if(a % i === 0){
+    		is = 1; 
+    	}else{
+    		is = 0;
+    	}
+    }
 	// Ne rien modifier au dessous de ce commentaire
 	return is;
 }
@@ -132,7 +138,6 @@ function river_n_sequence(river, n) {
 	// Ne rien modifier au dessus de ce commentaire
     var tableau = river.toString();
     tableau += river_next(river);
-    console.log(tableau);
     sequences = tableau;
 	// Ne rien modifier au dessous de ce commentaire
 	return sequences;
