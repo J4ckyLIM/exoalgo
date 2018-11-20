@@ -73,6 +73,39 @@ function restart() {
 // Fonction de vérification de victoire
 function is_win(x, y) {
 	// Ne rien modifier au dessus de ce commentaire
+  	console.log('x', x);
+  	console.log('y', y);
+  	console.log('morpion', morpion[y][x]);
+  	console.log('morpion', morpion[0][0]);
+  	console.log('morpion', morpion[0][1]);
+  	console.log('morpion', morpion[0][2]);
+  	if (morpion [0][0] != undefined && morpion[0][0]== morpion[0][1] && morpion[0][0]== morpion[0][2]){ 
+  		win = morpion[0][0];
+  	}else if (morpion [1][0] != undefined && morpion[1][0]== morpion[1][1] && morpion[1][0]== morpion[1][2]){
+  		win = morpion[1][0];
+  	}else if (morpion [2][0] != undefined && morpion[2][0]== morpion[2][1] && morpion[2][0]== morpion[2][2]){
+  		win = morpion[2][0];
+  	}else if (morpion [0][0] != undefined && morpion[0][0]== morpion[1][1] && morpion[0][0]== morpion[2][2]){
+  		win = morpion[0][0];
+  	}else if (morpion [2][0] != undefined && morpion[2][0]== morpion[1][1] && morpion[2][0]== morpion[0][2]){
+  		win = morpion[2][0];
+  	}else if (morpion [0][0] != undefined && morpion[0][0]== morpion[1][0] && morpion[0][0]== morpion[2][0]){
+  		win = morpion[0][0];
+  	}else if (morpion [0][1] != undefined && morpion[0][1]== morpion[1][1] && morpion[0][1]== morpion[2][1]){
+  		win = morpion[0][1];
+  	}else if (morpion [0][2] != undefined && morpion[0][2]== morpion[1][2] && morpion[0][2]== morpion[2][2]){
+  		win = morpion[0][2];
+  	}else if (morpion[0][0]!= undefined && 
+  		      morpion[0][1]!= undefined &&
+  		      morpion[0][2]!= undefined &&
+  		      morpion[1][0]!= undefined &&
+  		      morpion[1][1]!= undefined &&
+  		      morpion[1][2]!= undefined &&
+  		      morpion[2][0]!= undefined &&
+  		      morpion[2][1]!= undefined &&
+  		      morpion[2][2]!= undefined){
+  		win = 'null';
+  	}
 
 	// Ne rien modifier au dessous de ce commentaire
 	if (win == 'null') {
