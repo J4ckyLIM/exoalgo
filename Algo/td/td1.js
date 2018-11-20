@@ -137,7 +137,12 @@ function river_n_sequence(river, n) {
 	var sequences = '';
 	// Ne rien modifier au dessus de ce commentaire
     var tableau = river.toString();
+<<<<<<< Updated upstream
     tableau += river_next(river);
+=======
+    tableau += river_next(river) ;
+    console.log(tableau);
+>>>>>>> Stashed changes
     sequences = tableau;
 	// Ne rien modifier au dessous de ce commentaire
 	return sequences;
