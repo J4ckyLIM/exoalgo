@@ -142,7 +142,25 @@ for (var element_chaine of chaine){
 function pyramide_easy(height) {
 	var sequences = '';
 	// Ne rien modifier au dessus de ce commentaire
-
+var nbTraits
+var nbEtoiles
+var nombreLu
+nombreLu = parseInt(height);
+// Parcourir chaque ligne 
+for (var noLigne=1; noLigne<=nombreLu; noLigne++){
+	// Calculer le nb de chiffres et de zéros à écrire sur la ligne courante
+	nbEtoiles = nombreLu - noLigne + 1;
+	nbTraits = nombreLu - nbEtoiles;
+	// Écrire les traits de la ligne courante
+	for (var i=1; i<=nbTraits; i++){
+		sequences += "/";
+	}
+	// Écrire les etoiles de la ligne courante
+	for (var noEtoiles = nbEtoiles; noEtoiles>=1; noEtoiles--){
+		sequences += "*";
+	}
+	sequences += "\n";
+}
 	// Ne rien modifier au dessous de ce commentaire
 	return sequences;
 }
