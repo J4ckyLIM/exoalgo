@@ -142,6 +142,7 @@ for (var element_chaine of chaine){
 function pyramide_easy(height) {
 	var sequences = '';
 	// Ne rien modifier au dessus de ce commentaire
+<<<<<<< Updated upstream
 var nbTraits
 var nbEtoiles
 var nombreLu
@@ -161,6 +162,9 @@ for (var noLigne=1; noLigne<=nombreLu; noLigne++){
 	}
 	sequences += "\n";
 }
+=======
+var total
+>>>>>>> Stashed changes
 	// Ne rien modifier au dessous de ce commentaire
 	return sequences;
 }
