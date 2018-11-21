@@ -167,7 +167,7 @@ function river_delimiter(river, index_start, index_end) {
 }
 
 // Fonction pour obtenir les rivières uniques entre 1 et max
-function river_unique(river, max) {
+function river_unique(max) {
 	var rivers = '';
 	// Ne rien modifier au dessus de ce commentaire
 

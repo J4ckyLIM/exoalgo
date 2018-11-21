@@ -161,7 +161,60 @@ function restart() {
 // Fonction de vérification de victoire
 function is_win(x, y) {
 	// Ne rien modifier au dessus de ce commentaire
+	/* _IL FAUT CHECK SI PAR RAPPORT AU DERNIER PION IL Y A DES PIONS DERRIERE OU DEVANT ET 
+	   _ET SI ILS SONT TOUS JAUNE
+	   _ALORS J EST LE GAGNANT
+	   _IL FAUT CHECK POUR R
+	   _ALORS R GAGNE*/
+	//CHorizontal
+    	if (power4[y][x] == power4[y][x+1] && power4[y][x] == power4[y][x+2] && power4[y][x] == power4[y][x+3])
+    		{
+        	win = power4[y][x];
+    		}
+    	else if (power4[y][x] == power4[y][x-1] && power4[y][x] == power4[y][x+1] && power4[y][x] == power4[y][x+2]) {
+		//console.log(turn + ' a perdu.');
+		win = power4[y][x];
+		}
+		else if (power4[y][x] == power4[y][x-2] && power4[y][x] == power4[y][x-1] && power4[y][x] == power4[y][x+1]) {
+		//console.log(turn + ' a perdu.');
+		win = power4[y][x];
+		}
+		else if (power4[y][x] == power4[y][x-3] && power4[y][x] == power4[y][x-2] && power4[y][x] == power4[y][x-1]) {
+		//console.log(turn + ' a perdu.');
+		win = power4[y][x];
+		}
+		else if (y <= 2 && power4[y][x] == power4[y+1][x] && power4[y][x] == power4[y+2][x] && power4[y][x] == power4[y+3][x]) {
+		//console.log(turn + ' a perdu.');
+		win = power4[y][x];
+		}
+		else if (y <= 2 && power4[y][x] == power4[y+1][x+1] && power4[y][x] == power4[y+2][x+2] && power4[y][x] == power4[y+3][x+3]) {	
+		win = power4[y][x];
+		}
+		else if (y <= 2 && power4[y][x] == power4[y+1][x-1] && power4[y][x] == power4[y+2][x-2] && power4[y][x] == power4[y+3][x-3]) {		
+		win = power4[y][x];
+		}
+		else if (y >= 1 && y <= 3 && power4[y][x] == power4[y-1][x-1] && power4[y][x] == power4[y+1][x+1] && power4[y][x] == power4[y+2][x+2]) {
+		win = power4[y][x];
+		}
+		else if (y >= 2 && y <= 4 && power4[y][x] == power4[y-2][x-2] && power4[y][x] == power4[y-1][x-1] && power4[y][x] == power4[y+1][x+1]) {
+		win = power4[y][x];
+		}	
+		else if (y >= 1 && y <= 3 && power4[y][x] == power4[y-1][x+1] && power4[y][x] == power4[y+1][x-1] && power4[y][x] == power4[y+2][x-2]) {		
+		win = power4[y][x];
+		}
+		else if (y >= 2 && y <= 4 && power4[y][x] == power4[y-2][x+2] && power4[y][x] == power4[y-1][x+1] && power4[y][x] == power4[y+1][x-1]) {
+		
+		win = power4[y][x];
+		}else{
+			win == false;
+		}
+	
+    /*console.log (power4[y][x]);
+    power4[y][x] == power4[y][x+1] // line
 
+    power4[y][x] == power4[y+1][x] // row */
+	
+    //console.log(power4)
 	// Ne rien modifier au dessous de ce commentaire
 	if (win == 'null') {
 		document.getElementById('infos').children[0].innerHTML = 'Match nul';
