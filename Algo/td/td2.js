@@ -129,11 +129,24 @@ function inverse_azAZ(sentence) {
 function decompose_string(sentence) {
 	var sequences = '';
 	// Ne rien modifier au dessus de ce commentaire
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    var chaine = sentence;
+    for (var element_chaine of chaine){
+    }
+    
+=======
+>>>>>>> Stashed changes
 var chaine = sentence;
 for (var element_chaine of chaine){
 	sequences += element_chaine + "\n" ;
 }
  
+<<<<<<< Updated upstream
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 	// Ne rien modifier au dessous de ce commentaire
 	return sequences;
 }
