@@ -203,11 +203,17 @@ function is_win(x, y) {
 		win = power4[y][x];
 		}
 		else if (y >= 2 && y <= 4 && power4[y][x] == power4[y-2][x+2] && power4[y][x] == power4[y-1][x+1] && power4[y][x] == power4[y+1][x-1]) {
-		
 		win = power4[y][x];
-		}else{
-			win == false;
+		}else if (power4[0][0]!== undefined &&
+			      power4[0][1]!== undefined &&
+			      power4[0][2]!== undefined &&
+			      power4[0][3]!== undefined &&
+			      power4[0][4]!== undefined &&
+			      power4[0][5]!== undefined &&
+			      power4[0][6]!== undefined){
+			win = 'null';
 		}
+
 	
     /*console.log (power4[y][x]);
     power4[y][x] == power4[y][x+1] // line
