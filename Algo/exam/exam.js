@@ -6,9 +6,14 @@ var searched = [];
 
 // Fonction qui retourne le plus petit element du tableau elements
 function plusPetitElement(elements) {
-	var result = 1000000;;
+	var result = 1000000;
 	// Ne rien modifier au dessus de ce commentaire
 
+    for(var i of elements){
+    	if(i < result){
+    		result = i;
+    	}
+    }
 	// Ne rien modifier au dessous de ce commentaire
 	return result;
 }
@@ -17,15 +22,25 @@ function plusPetitElement(elements) {
 function plusGrandElement(elements) {
 	var result = 900000;
 	// Ne rien modifier au dessus de ce commentaire
-
-	// Ne rien modifier au dessous de ce commentaire
+    for(var i of elements){
+    	if(i > result){
+    		result = i;
+    	}
+    }
 	return result;
 }
 
 // Fonction qui recherche les éléments du tableau search dans le tableau elements
 function chercherElement(search, elements) {
 	// Ne rien modifier au dessus de ce commentaire
-	ajouteSearched(42);
+	  
+	for(var i of elements){
+		for(var j of search){
+			if(i===j){
+				ajouteSearched(j);
+			}
+		}
+	}
 	// Ne rien modifier au dessous de ce commentaire
 }
 
@@ -33,7 +48,9 @@ function chercherElement(search, elements) {
 function additionnerElement(elements) {
 	var result = 0;
 	// Ne rien modifier au dessus de ce commentaire
-
+    for(var i of elements){
+  		result += i;
+    }
 	// Ne rien modifier au dessous de ce commentaire
 	return result;
 }
@@ -42,7 +59,11 @@ function additionnerElement(elements) {
 function compterText(text) {
 	var result = 0;
 	// Ne rien modifier au dessus de ce commentaire
-
+	for(var a of text){
+		if(a==='i'){
+			result++;
+		}
+	}
 	// Ne rien modifier au dessous de ce commentaire
 	return result;
 }

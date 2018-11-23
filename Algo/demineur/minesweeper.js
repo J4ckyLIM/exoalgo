@@ -256,7 +256,12 @@ function play(x, y) {
 				{
 					minesweeper[y][x] = count;
 				}
-				dessinerNbMine(x,y);			
+				if(minesweeper[y][x] == 'E'){
+					dessinerCaseVide(x,y);
+				}
+				else{
+					dessinerNbMine(x,y);
+				}			
 				
 				// Ne rien modifier au dessous de ce commentaire
 			}
@@ -268,23 +273,6 @@ function play(x, y) {
 // Fonction pour completer automatiquement la grille
 function completerGrille() {
 	// Ne rien modifier au dessus de ce commentaire
-	/*var count = 0;
-
-	for (var i = -1; i <= 1; i++)
-	{	
-		for(var j = -1; j <= 1; j++)
-		{
-			if(minesweeper[y-i][x-j]=='M'){
-				count++;
-				minesweeper
-			}
-		}
-	}*/
-					
-				
-			
-		 
-
 	
 	// Ne rien modifier au dessous de ce commentaire
 	dessinerGrille();
@@ -293,7 +281,13 @@ function completerGrille() {
 // Fonction de vérification de victoire
 function is_win() {
 	// Ne rien modifier au dessus de ce commentaire
-
+    for (var k = 0; k <= 9; k++){
+    	for (var l = 0; l <= 15; l++){
+    		if(minesweeper[k][l]!== undefined){
+    			win == minesweeper[k][l];
+    		}
+    	}
+    }
 	// Ne rien modifier au dessous de ce commentaire
 	if (win == 'mine') {
 		verify();
