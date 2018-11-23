@@ -273,10 +273,77 @@ function play(x, y) {
 // Fonction pour completer automatiquement la grille
 function completerGrille() {
 	// Ne rien modifier au dessus de ce commentaire
+<<<<<<< Updated upstream
 	
+=======
+
+for(var i = 0; i < nbY; i++){
+		for(var j = 0; j < nbX; j++){
+			if(minesweeper[i][j] === 9){ // Si on tombe sur une bombe...
+				// Chiffres au-dessus de la bombe
+				if(i-1 >= 0){
+					// En haut à gauche...
+					if(j-1 >= 0){
+						if(minesweeper[i-1][j-1] < 9){
+							minesweeper[i-1][j-1] += 1;
+						}
+					}
+					// En haut à droite
+					if(j+1 < nbX){
+						if(minesweeper[i-1][j+1] < 9){
+							minesweeper[i-1][j+1] += 1;
+						}
+					}
+					// En haut au milieu
+					if(minesweeper[i-1][j] < 9){
+						minesweeper[i-1][j] += 1;
+					}
+				}
+				
+				// Chiffres au-niveau de la bombe
+				// À gauche de la bombe
+				if(j-1 >= 0){
+					if(minesweeper[i][j-1] < 9){
+						minesweeper[i][j-1] += 1;
+					}
+				}
+				// À droite de la bombe
+				if(j+1 < nbX){
+					if(minesweeper[i][j+1] < 9){
+						minesweeper[i][j+1] += 1;
+					}
+				}
+				
+				// Chiffres sous la bombe
+				if(i+1 < nbY){
+					// En bas à gauche
+					if(j-1 >= 0){
+						if(minesweeper[i+1][j-1] < 9){
+							minesweeper[i+1][j-1] += 1;
+						}
+					}
+					// En bas à droite
+					if(j+1 < nbX){
+						if(minesweeper[i+1][j+1] < 9){
+							minesweeper[i+1][j+1] += 1;
+						}
+					}
+					// En bas au milieu
+					if(minesweeper[i+1][j] < 9){
+						minesweeper[i+1][j] += 1;
+					}
+				}
+			}
+		}
+	}
+	return minesweeper;
+}
+
+
+>>>>>>> Stashed changes
 	// Ne rien modifier au dessous de ce commentaire
 	dessinerGrille();
-}
+
 
 // Fonction de vérification de victoire
 function is_win() {
