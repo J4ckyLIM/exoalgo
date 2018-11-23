@@ -172,19 +172,15 @@ function is_win(x, y) {
         	win = power4[y][x];
     		}
     	else if (power4[y][x] == power4[y][x-1] && power4[y][x] == power4[y][x+1] && power4[y][x] == power4[y][x+2]) {
-		//console.log(turn + ' a perdu.');
 		win = power4[y][x];
 		}
 		else if (power4[y][x] == power4[y][x-2] && power4[y][x] == power4[y][x-1] && power4[y][x] == power4[y][x+1]) {
-		//console.log(turn + ' a perdu.');
 		win = power4[y][x];
 		}
 		else if (power4[y][x] == power4[y][x-3] && power4[y][x] == power4[y][x-2] && power4[y][x] == power4[y][x-1]) {
-		//console.log(turn + ' a perdu.');
 		win = power4[y][x];
 		}
 		else if (y <= 2 && power4[y][x] == power4[y+1][x] && power4[y][x] == power4[y+2][x] && power4[y][x] == power4[y+3][x]) {
-		//console.log(turn + ' a perdu.');
 		win = power4[y][x];
 		}
 		else if (y <= 2 && power4[y][x] == power4[y+1][x+1] && power4[y][x] == power4[y+2][x+2] && power4[y][x] == power4[y+3][x+3]) {	
