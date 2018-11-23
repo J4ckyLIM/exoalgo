@@ -163,8 +163,8 @@ nombreLu = parseInt(height);
 // Parcourir chaque ligne 
 for (var noLigne=1; noLigne<=nombreLu; noLigne++){
 	// Calculer le nb de chiffres et de zéros à écrire sur la ligne courante
-	nbEtoiles = nombreLu - noLigne + 1;
-	nbTraits = nombreLu - nbEtoiles;
+	nbEtoiles = nombreLu + noLigne + 1;
+	nbTraits = nombreLu + nbEtoiles;
 	// Écrire les traits de la ligne courante
 	for (var i=1; i<=nbTraits; i++){
 		sequences += "/";
